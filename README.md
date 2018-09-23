@@ -1,5 +1,5 @@
 # hello_cpp
-A simple C++ example with Visual Studio Code integration.
+A simple C++ example with Cygwin64 g++/gdb Visual Studio Code integration.
 
 ### Source code
 https://github.com/louipr/hello_cpp
