@@ -4,30 +4,39 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Clean",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "./out.exe"
+            ],
+            "problemMatcher": []
+        },
+        {
             "label": "Build",
             "type": "shell",
             "command": "g++",
             "args": [
                 "-g",
                 "-o",
-                "hello.exe",
-                "hello.cpp"
+                "out.exe",
+                "*.cpp"
             ],
             "problemMatcher": []
         },
         {
             "label": "Run",
             "type": "shell",
-            "command": "./hello.exe",
+            "command":"./out.exe",
             "problemMatcher": []
         },
         {
             "label": "Build & Run",
+            "command":"./out.exe",
             "dependsOn": [
-                "Build",
-                "Run"
+                "Clean",
+                "Build"
             ],
-            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
